@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Utilities
+</title>
+  
+  <!-- Section 3 Lecture 46-->
+  <!-- CSS -->
+  <style>
+    #heading {
+      background-color: dimgrey;
+      color:white;
+      font-family: arial;
+      text-align: center;
+      margin:0px;
+      height:256px;
+    background-image: url("images/header.png")}
+    
+    #button {
+      padding: 1em;
+      margin: 16px;}
+    
+    .menu {
+      margin:0px 0px 10px 0px;
+      width:100%;
+      height:32px;}
+      
+    nav {
+      margin: 0px;
+      padding:0px}
+    
+    nav ul a {text-decoration: none;}
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;}
+      
+    #MainContainer {
+      width:100%;
+      overflow: auto}
+    
+    #NavContainer {float:left}
+    
+    #ContentContainer {
+      margin-left:160px;
+      padding:16px;
+      border-left:1px solid gray;}
+    
+    header, footer {clear:left;text-align: center}
+    
+  </style>
+  
+  
+  <!-- JAVASCRIPT -->
+  <script>
+    var changed = false
+    
+    function toggle_text_color()
+    {
+      if (changed == false){
+        document.getElementById('para').style.color = "red";
+        changed = true
+      }
+      else{
+        document.getElementById('para').style.color = "black";
+        changed = false
+      }
+    }
+    
+    function update_text(){
+      var text = "Now, if only I could finish this ruby on rails course!"
+      document.getElementById("para").innerHTML = text
+    }
+  </script>
+
+  <!-- HTML -->
+</head>
+
+<div id="MainContainer">
+<body>
+
+<h1 id="heading">Tutorial Doctor<br> Utilities</h1>
+
+<header>This is the header</header>
+  
+  <div id="NavContainer">
+    <nav>
+      <ul>
+        <li class="menu"><a href="#">Calculator</a></li>
+        <li class="menu"><a href="#">To-Do List</a></li>
+        <li class="menu"><a href="#">Notes App</a></li>
+        </ul>
+    </nav>
+  </div>
+  
+  <div id="ContentContainer">
+    <p id="para">lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim maxime labore adipisci sunt quisquam odio similique corporis hic atque ad et aspernatur facere rerum voluptatem nisi modi culpa perferendis laudantium eos odit velit debitis aut repellat fugiat ex necessitatibus aliquam eligendi quo cum sit quod nemo amet unde suscipit accusamus officiis aperiam dicta in a mollitia animi alias perspiciatis eaque neque tempora minus praesentium provident earum blanditiis ipsum nobis deleniti qui cumque soluta dolor sed dolores voluptatibus nulla asperiores sequi esse iusto temporibus quae iure vel explicabo facilis voluptate dignissimos natus quos at ipsa nesciunt possimus ut tenetur repu</p>
+  </div>
+
+  
+  <hr>
+  
+  <button id="button" type="button" onclick="toggle_text_color()">Toggle Color</button>
+  
+  <button id="button" type="button" onclick="update_text()">Update Text</button>
+  
+  <footer><b>EM</b>: thetutorialdoctor@gmail.com<br>
+    <b>PN</b>: 111-111-1111</footer>
+  
+</body>
+</div>
+  
+</html>
