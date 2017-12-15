@@ -1,5 +1,11 @@
 # README
 
+**About**: A most basic rails app. Creates a database for storing information about a person and displays the information on a page with a 3D sketchfab model to represent gender. 
+
+**Note**: Not a lot of fancy stuff going on. Longwinded for clarity.
+
+**To-do**: Add comments for clarity.
+
 ## The People
 
 ### Models
@@ -9,6 +15,7 @@
 		age: integer
 		gender: string
 		height: integer
+		fab: string
 
 ### Controllers
 	people
@@ -229,14 +236,14 @@ end
 ## fabs/_female.html.erb & fabs/_male.html.erb
 These are just embeds from sckethfab.com
 
-# NOTES
+## NOTES
 
 To add attributes to a model:
-
+```
 rails generate migration add_columnname_to_tablename columnname:datatype
 For example:
 
 rails generate migration add_password_to_users password:string
-
+```
 
 
