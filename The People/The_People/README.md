@@ -48,6 +48,7 @@ rake db:migrate
 brackets .
 rails c
 Person.connection
+
 ```
 tom = Person.new(:name=>’Tom’, :bio=>’Tom is cool’, :age=>’24’, :height=>’6.4’, :gender=>’male’)
 
@@ -59,16 +60,20 @@ sara.save
 ```
 
 ## Then...
+
 1. Add bootstrap saas gem
 2. bundle install
 
 ## Routes
+
 ```
 root "people#index"
+
 resources :people
 ```
 
 ## people_controller.rb
+
 ```
 class PeopleController < ApplicationController
   def index
@@ -122,6 +127,7 @@ class PeopleController < ApplicationController
     end
 end
 ```
+
 ## index.html.erb
 ```
 <div class="container">
@@ -138,7 +144,9 @@ end
   <%= link_to "Create New Person", new_person_path(p), class: "btn btn-primary"%>
 </div>
 ```
+
 ## edit.html.erb
+
 ```
 <br><br>
 
@@ -178,7 +186,9 @@ end
   <%end%>
 </div>
 ```
+
 ## new.html.erb
+
 ```
 <br><br>
 
@@ -208,7 +218,9 @@ end
 <%end%>
 </div>
 ```
+
 ## show.html.erb
+
 ```
 <br><br>
 
@@ -236,12 +248,14 @@ end
   <%end%>
 </div>
 ```
+
 ## fabs/_female.html.erb & fabs/_male.html.erb
 These are just embeds from sckethfab.com
 
 ## NOTES
 
 To add attributes to a model:
+
 ```
 rails generate migration add_columnname_to_tablename columnname:datatype
 For example:
