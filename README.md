@@ -1,3 +1,5 @@
-# RailsCourse
+# Rails Projects
 
-My work from an Ruby on Rails course I am taking.
+By the Tutorial Doctor
+
+Learning Ruby on Rails.

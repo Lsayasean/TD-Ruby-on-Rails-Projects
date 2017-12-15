@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>People</h1>
+  
+  <% @people.each do |p|%>
+    <div style="width:100%">
+      <b><p><%=p.name%></p></b>
+      <u><%= link_to "Show", p%></u>
+      <u><%= link_to "Edit", edit_person_path(p)%></u>
+      <u><%= link_to 'Delete',  { action: :destroy, id: p.id }, method: :delete, data: { confirm: 'Are you sure?' } %></u>
+    </div><br>
+  <%end%>
+  <%= link_to "Create New Person", new_person_path(p), class: "btn btn-primary"%>
+</div>

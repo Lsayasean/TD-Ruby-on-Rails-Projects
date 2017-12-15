@@ -1,0 +1,30 @@
+<br><br>
+
+<div class="container">
+<u><%= link_to "Back", root_path%></u>
+</div><br>
+
+<div class="container w3-card">
+  <%= form_for(@person) do |f|%>
+    <h1>New: <%= @person.name%></h1>
+    <%= f.label :name%>
+    <%= f.text_field :name, class: "form-control"%>
+
+    <%= f.label :age%>
+    <%= f.text_field :age, class: "form-control"%>
+
+    <%= f.label :height%>
+    <%= f.text_field :height, class: "form-control"%>
+
+    <%= f.label :gender%>
+    <%= f.select :gender, options_for_select(["male","female"]), {}, class: "form-control" %>
+
+    <%= f.label :bio%>
+    <%= f.text_area :bio, class: "form-control"%><br>
+  
+    <%= f.label :fab%>
+    <%= f.text_area :fab, class: "form-control"%><br>
+
+    <%= f.submit 'Create', class: "btn btn-primary"%>
+<%end%>
+</div>

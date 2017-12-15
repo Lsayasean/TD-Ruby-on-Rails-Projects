@@ -1,0 +1,33 @@
+<br><br>
+
+<div class="container">
+<u><%= link_to "Back", root_path%></u>
+</div><br>
+
+<div class="container w3-card">
+  <div class="row">
+    <div class="col-md-4">
+      <h1><%=@person.name%></h1>
+      <p>Age: <%=@person.age%></p>
+      <p>Height: <%=@person.height%></p>
+      <p>Gender: <%=@person.gender%></p>
+      <p>Bio: <%=@person.bio%></p>
+      <p>Created: <%=@person.created_at%></p>
+      <p>Object: <%=@person%></p>
+      <p><b>Params:</b> <%=@params%></p>
+    </div>
+
+    <div class="col-md-4">
+      <% if @person.gender == "male"%>
+      <!--SHOW MALE-->
+      <%= render 'fabs/male'%>
+      <%# render partial: 'fabs/male', locals: {person: @person}%>
+      <% elsif @person.gender == "female"%>
+      <!--SHOW FEMALE-->
+      <%= render 'fabs/female'%>
+      <%else%>
+      <%=render 'show'%>
+      <%end%>
+    </div>
+  </div>
+</div>
