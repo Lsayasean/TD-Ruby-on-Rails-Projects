@@ -63,8 +63,10 @@ sara.save
 2. bundle install
 
 ## Routes
-```root "people#index"
-resources :people```
+```
+root "people#index"
+resources :people
+```
 
 ## people_controller.rb
 ```
