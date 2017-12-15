@@ -48,7 +48,7 @@ rake db:migrate
 brackets .
 rails c
 Person.connection
-
+```
 tom = Person.new(:name=>’Tom’, :bio=>’Tom is cool’, :age=>’24’, :height=>’6.4’, :gender=>’male’)
 
 tom.save
@@ -56,14 +56,15 @@ tom.save
 sara = Person.new(:name=>“Sara”, :bio=>”Sara is cool too”, :age=>”19”, :height=>“5.0”, :gender=>”female”)
 
 sara.save
+```
 
 ## Then...
 1. Add bootstrap saas gem
 2. bundle install
 
 ## Routes
-root "people#index"
-resources :people
+```root "people#index"
+resources :people```
 
 ## people_controller.rb
 ```
