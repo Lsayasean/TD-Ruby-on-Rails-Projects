@@ -27,18 +27,18 @@
         
 ## Model Field Type List:
 
-integer
-primary_key
-decimal
-float
-boolean
-binary
-string
-text
-date
-time
-datetime
-timestamp
+- integer
+- primary_key
+- decimal
+- float
+- boolean
+- binary
+- string
+- text
+- date
+- time
+- datetime
+- timestamp
 
 ## Console Setup Code:
 
