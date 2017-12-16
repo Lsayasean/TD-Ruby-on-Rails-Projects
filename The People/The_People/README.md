@@ -42,6 +42,7 @@ timestamp
 
 ## Console Setup Code:
 
+```
 rails new The_People
 cd The_People
 rails g model Person name:string bio:text age:integer gender:string height:decimal
@@ -50,6 +51,7 @@ rake db:migrate
 brackets .
 rails c
 Person.connection
+```
 
 ```
 tom = Person.new(:name=>’Tom’, :bio=>’Tom is cool’, :age=>’24’, :height=>’6.4’, :gender=>’male’)
