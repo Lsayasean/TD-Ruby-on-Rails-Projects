@@ -26,6 +26,7 @@
 		destroy
         
 ## Model Field Type List:
+
 integer
 primary_key
 decimal
@@ -40,6 +41,7 @@ datetime
 timestamp
 
 ## Console Setup Code:
+
 rails new The_People
 cd The_People
 rails g model Person name:string bio:text age:integer gender:string height:decimal
@@ -129,6 +131,7 @@ end
 ```
 
 ## index.html.erb
+
 ```
 <div class="container">
   <h1>People</h1>
