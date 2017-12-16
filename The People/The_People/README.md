@@ -6,7 +6,7 @@
 
 **To-do**: Add comments for clarity.
 
-## The People
+## Planning
 
 ### Models
 	Person
@@ -25,7 +25,7 @@
 		update
 		destroy
         
-## Field Type List:
+## Model Field Type List:
 integer
 primary_key
 decimal
@@ -249,7 +249,7 @@ end
 </div>
 ```
 
-## fabs/_female.html.erb & fabs/_male.html.erb
+**fabs/_female.html.erb & fabs/_male.html.erb**
 These are just embeds from sckethfab.com
 
 ## NOTES
