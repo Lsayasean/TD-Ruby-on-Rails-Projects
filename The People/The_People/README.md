@@ -267,3 +267,5 @@ rails generate migration add_password_to_users password:string
 
 ![Design](https://github.com/TutorialDoctor/TD-Ruby-on-Rails-Projects/blob/master/Images/people_design.png?raw=true)
 
+## Preview
+![Preview](https://github.com/TutorialDoctor/TD-Ruby-on-Rails-Projects/blob/master/Images/people_preview.png?raw=true)
