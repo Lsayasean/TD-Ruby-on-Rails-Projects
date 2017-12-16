@@ -6,6 +6,8 @@
 
 **To-do**: Add comments for clarity.
 
+The steps I used to develop this webapp are below:
+
 ## Planning
 
 ### Models
