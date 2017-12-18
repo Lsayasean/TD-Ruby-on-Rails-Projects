@@ -1,11 +1,11 @@
 class PeopleController < ApplicationController
   def index
-    @people = Person.all
     #http://www.rymcmahon.com/articles/2
     if params[:search]
       @people = Person.search(params[:search]).order("created_at DESC")
     else
-      @people = Person.all.order("created_at DESC")
+      #@people = Person.all.order("created_at DESC")
+      @people = Person.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
     end
   end
 
