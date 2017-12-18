@@ -1,12 +1,18 @@
 class PeopleController < ApplicationController
   def index
     @people = Person.all
+    #http://www.rymcmahon.com/articles/2
+    if params[:search]
+      @people = Person.search(params[:search]).order("created_at DESC")
+    else
+      @people = Person.all.order("created_at DESC")
+    end
   end
-  
-  def new  
+
+  def new
     @person = Person.new
   end
-  
+
   def create
     @person = Person.new(person_params)
     if @person.save
@@ -15,16 +21,16 @@ class PeopleController < ApplicationController
       render 'new'
     end
   end
-  
+
   def show
     @person = Person.find(params[:id])
     @params = params
   end
-  
+
   def edit
     @person = Person.find(params[:id])
   end
-  
+
   def update
     @person = Person.find(params[:id])
     if @person.update_attributes(person_params)
@@ -34,7 +40,7 @@ class PeopleController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     @person = Person.find(params[:id])
     if @person.delete

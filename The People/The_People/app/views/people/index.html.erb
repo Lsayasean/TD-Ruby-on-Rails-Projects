@@ -1,6 +1,11 @@
 <div class="container">
+  <% if @people.blank? %>
+  <h4>There are no people containing the term <%= params[:search] %>.</h4>
+<% end %>
+
+<div class="container">
   <h1>People</h1>
-  
+
   <% @people.each do |p|%>
     <div style="width:100%">
       <b><p><%=p.name%></p></b>
