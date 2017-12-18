@@ -12,10 +12,12 @@
   </head>
 
   <body>
+    <div class="container">
     <%= form_tag(people_path, :method => "get", id: "search-form", class:"navbar-form navbar-left") do %>
       <%= text_field_tag :search, params[:search], placeholder: "Search People", class: "form-control" %>
       <%= submit_tag "Search", :name => nil,class: "btn btn-default" %>
     <% end %>
+      </div>
     <br><br
     
     <%= yield %>
