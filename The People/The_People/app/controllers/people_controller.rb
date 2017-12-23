@@ -25,6 +25,10 @@ class PeopleController < ApplicationController
   def show
     @person = Person.find(params[:id])
     @params = params
+    @json = @person.as_json
+    @key = @person.to_key
+    @att = @person.attribute_names
+    @inspection = @person.inspect
   end
 
   def edit
