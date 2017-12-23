@@ -13,11 +13,15 @@
       <p>Gender: <%=@person.gender%></p>
       <p>Bio: <%=@person.bio%></p>
       <p>Created: <%=@person.created_at%></p>
-      <p>Object: <%=@person%></p>
-      <p><b>Params:</b> <%=@params%></p>
-      <p>As JSON: <%=@json%></p>
-      <p>To Key: <%=@key%></p>
-      <p>Inspection: <%=@inspection%></p>
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#demo">Collapsible</button>
+      <div id="demo" class="collapse"
+        <p>Object: <%=@person%></p>
+        <p><b>Params:</b> <%=@params%></p>
+        <p>As JSON: <%=@json%></p>
+        <p>To Key: <%=@key%></p>
+        <p>Inspection: <%=@inspection%></p>
+      </div>
     </div>
 
     <div class="col-md-4">
